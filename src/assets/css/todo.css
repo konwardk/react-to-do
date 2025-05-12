@@ -6,23 +6,44 @@
     margin-top: 20px;
     text-align: center;
 }
-.todo-form{
-    margin: 2rem;
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.form-btn{
-    margin: 10px;
-    height: 2rem;
-    width: 3.5rem;
-    background-color: blueviolet;
-    color: aliceblue;
-    outline: none;
-    border: none;
-    cursor: pointer;
+
+.input-todo {
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 60%;
+  transition: border-color 0.3s ease;
+  outline: none;
 }
-.input-todo{
-    height: 2rem;
-    width: 20rem;
+
+.input-todo:focus {
+  border-color: rgb(166, 33, 249);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
+
+.form-btn {
+  padding: 10px 20px;
+  background-color: rgb(166, 33, 249);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: rgb(166, 33, 249);
+}
+
 .tasks{
     margin: 10px;
 }
