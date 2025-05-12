@@ -45,7 +45,7 @@
 }
 
 .tasks{
-    margin: 10px;
+    margin: 0px;
 }
 
 
@@ -75,3 +75,24 @@
     cursor: pointer;
 }
 
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(41, 0, 66);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    gap: 20px;
+}
+.about a{
+    text-decoration: none;
+    color: rgb(204, 141, 243);
+    font-weight: bold;
+}
+.tech{
+    color: rgb(156, 156, 242);
+}
