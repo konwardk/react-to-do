@@ -46,6 +46,7 @@
 
 .tasks{
     margin: 0px;
+    height: fit-content;
 }
 
 
@@ -83,8 +84,9 @@
     text-align: center;
     background-color: rgb(41, 0, 66);
     color: white;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin-top: 100dvh;
+    bottom: 0px;
     padding: 1rem;
     gap: 20px;
 }
