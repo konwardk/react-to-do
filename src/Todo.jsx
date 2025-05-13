@@ -124,14 +124,12 @@ export default function Todo() {
           />
           <button className="form-btn" type="submit">Add</button>
         </form>
-      </div>
-
-      <div className="tasks">
+        <div className="tasks">
         <ul className="task-item">
           {task.map((curTask, index) => (
             <li className="item" key={index} style={{ backgroundColor: curTask.bgColor  || '' ,fontWeight: curTask.isDone ? 'bold' : 'normal' }}>
               <div>
-                <strong>{curTask.text}</strong>
+                <strong className='task'>{curTask.text}</strong>
                 <div className="timestamp">Added: {curTask.addedAt}</div>
               </div>
               <div className="action-icons">
@@ -163,7 +161,7 @@ export default function Todo() {
         </ul>
         
       </div>
-      
+      </div>
       <Footer/>
       
     </>

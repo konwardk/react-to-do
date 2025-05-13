@@ -1,22 +1,37 @@
 
 .about{
+
+}
+.about a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.about a:hover{
+    color: rgb(156, 156, 242);
+}
+
+.footer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     background-color: rgb(41, 0, 66);
     color: white;
     position: relative;
-    margin-top: 100dvh;
     bottom: 0px;
     padding: 1rem;
-    gap: 20px;
 }
-.about a{
-    text-decoration: none;
-    color: rgb(204, 141, 243);
-    font-weight: bold;
+.footer li{
+    list-style: none;
+    margin-top: 1rem;
+}
+.link{
+    gap: 1rem;
+    display: flex;
+    
+  
 }
 .tech{
     color: rgb(156, 156, 242);

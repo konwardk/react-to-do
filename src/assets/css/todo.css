@@ -5,6 +5,8 @@
 .todo-container{
     margin-top: 20px;
     text-align: center;
+    height: 100vh;
+    overflow-y: scroll;
 }
 .heading{
   position: relative;
@@ -15,7 +17,7 @@
   
 }
 .header{
-  background-color: blueviolet;
+  background-color: rgb(55, 17, 91);
   color: #ddd;
   margin: 0px 20px;
   padding: 10px;
@@ -37,10 +39,12 @@
   padding: 10px 14px;
   border: 2px solid #ddd;
   border-radius: 8px;
-  font-size: 16px;
-  width: 60%;
+  font-size: 20px;
+  width: 40%;
+  height: 2.8rem;
   transition: border-color 0.3s ease;
   outline: none;
+  font-family: fantasy;
 }
 
 .input-todo:focus {
@@ -50,13 +54,12 @@
 
 .form-btn {
   padding: 10px 20px;
-  background-color: rgb(166, 33, 249);
+  background-color: rgb(55, 17, 91);
   border: none;
   color: white;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 23px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .form-btn:hover {
@@ -74,6 +77,9 @@
     justify-content: center;
     align-items: center;
   }
+  .task{
+    font-size: 1.3rem;
+  }
 
 
 .item{
@@ -83,7 +89,7 @@
     justify-content:space-between;
     list-style: none;
     /* border: 1px solid rgb(54, 1, 1); */
-    background-color: rgb(166, 33, 249);
+    background-color: rgb(55, 17, 91);
     color: rgb(255, 255, 255);
     border-radius: 5px;
 }
