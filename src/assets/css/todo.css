@@ -6,6 +6,25 @@
     margin-top: 20px;
     text-align: center;
 }
+.heading{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  
+}
+.header{
+  background-color: blueviolet;
+  color: #ddd;
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 1px 1px;
+  font-weight: 700;
+  font-size: larger;
+  width: 200px;
+}
 .todo-form {
   display: flex;
   gap: 10px;
@@ -42,6 +61,9 @@
 
 .form-btn:hover {
   background-color: rgb(166, 33, 249);
+  box-shadow: 4px 4px 1px 2px;
+  color: rgb(241, 222, 255);
+
 }
 
 .tasks{
@@ -74,27 +96,4 @@
     outline: none;
     border: none;
     cursor: pointer;
-}
-
-.about{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(41, 0, 66);
-    color: white;
-    position: relative;
-    margin-top: 100dvh;
-    bottom: 0px;
-    padding: 1rem;
-    gap: 20px;
-}
-.about a{
-    text-decoration: none;
-    color: rgb(204, 141, 243);
-    font-weight: bold;
-}
-.tech{
-    color: rgb(156, 156, 242);
 }

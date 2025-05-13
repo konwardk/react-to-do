@@ -3,19 +3,21 @@ import { IoClose } from "react-icons/io5";
 import { FaEdit } from "react-icons/fa";
 import { MdDone, MdDoneAll } from "react-icons/md";
 import './assets/css/todo.css';
+import { Footer } from './components/Footer';
 
 export default function Todo() {
 
   const [inputData, setInputData] = useState('');
-const [task, setTask] = useState(() => {
-  const storedTasks = localStorage.getItem('todo-tasks');
-  return storedTasks ? JSON.parse(storedTasks) : [];
-});
+
+  const [task, setTask] = useState(() => {
+    const storedTasks = localStorage.getItem('todo-tasks');
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
+
   const [currentDateTime, setCurrentDateTime] = useState(new Date().toLocaleString());
 
-
   const [isEditing, setIsEditing] = useState(false);
-const [editIndex, setEditIndex] = useState(null);
+  const [editIndex, setEditIndex] = useState(null);
 
   // Update current time every second
   useEffect(() => {
@@ -106,7 +108,12 @@ const [editIndex, setEditIndex] = useState(null);
         <div className="date-time">
           <p>Current Date and Time: {currentDateTime}</p>
         </div>
-        <h2>Welcome to the TO DO app</h2>
+        <div className="heading">
+          <div className="header">
+            <h2>My ToDo</h2>
+          <h5>Manage Your Daily Tasks</h5>
+          </div>
+        </div>
         <form className="todo-form" onSubmit={handleFormSubmit}>
           <input
             type="text"
@@ -156,11 +163,8 @@ const [editIndex, setEditIndex] = useState(null);
         </ul>
         
       </div>
-      <div className="about">
-          <p>This application is developed by Dipankor Konwar using <span className='tech'>React JS</span> <br />
-          For more information, visit my <a href="https://portfolio-konwardks-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio</a> or <a href="https://www.linkedin.com/in/dipankor-konwar/" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile. <br />
-          For any queries, feel free to reach out via email: <a href="mailto:dipankorkonwar15@gmail.com">dipankorkonwar15@gmail.com</a></p>
-      </div>
+      
+      <Footer/>
       
     </>
   );
