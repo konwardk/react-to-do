@@ -124,43 +124,22 @@ export default function Todo() {
           />
           <button className="form-btn" type="submit">Add</button>
         </form>
-        <div className="tasks">
-        <ul className="task-item">
-          {task.map((curTask, index) => (
-            <li className="item" key={index} style={{ backgroundColor: curTask.bgColor  || '' ,fontWeight: curTask.isDone ? 'bold' : 'normal' }}>
-              <div>
-                <strong className='task'>{curTask.text}</strong>
-                <div className="timestamp">Added: {curTask.addedAt}</div>
-              </div>
-              <div className="action-icons">
-
-                  <span className='edit-btn' onClick={() => editTask(index)} prole="button" aria-label="Edit task">
-                  <FaEdit />
-                </span>
-
-                {curTask.isDone ? (
-                  <span className="doneall-btn" onClick={() => toggleDone(index)}>
-                    <MdDoneAll />
-                  </span>
-                ) : (
-                  <span className="done-btn" onClick={() => toggleDone(index)}>
-                    <MdDone />
-                  </span>
-                )}
-                <span
-                  className="close-btn"
-                  onClick={() => removeTask(index)}
-                  role="button"
-                  aria-label="Remove task"
-                >
-                  <IoClose />
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
-        
       </div>
+      <div className='tasks'>
+        <div className="task-item">
+            {
+              task.map((curTask,index)=>{
+                return <div className="item" key={index}>
+                 <li>
+                   {curTask}
+                </li>
+                  <div className="cross" onClick={() => removeTask(index)}>X</div>
+                </div>
+                
+              })
+              
+            }
+        </div>
       </div>
       <Footer/>
       
