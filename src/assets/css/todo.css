@@ -5,38 +5,104 @@
 .todo-container{
     margin-top: 20px;
     text-align: center;
+    height: 100vh;
+    overflow-y: scroll;
 }
-.todo-form{
-    margin: 2rem;
+.heading{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  
 }
-.form-btn{
-    margin: 10px;
-    height: 2rem;
-    width: 3.5rem;
-    background-color: blueviolet;
-    color: aliceblue;
-    outline: none;
-    border: none;
-    cursor: pointer;
+.header{
+  background-color: rgb(55, 17, 91);
+  color: #ddd;
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 6px 2px 0px;
+  font-weight: 700;
+  font-size: larger;
+  width: 200px;
 }
-.input-todo{
-    height: 2rem;
-    width: 20rem;
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
+
+.input-todo {
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 20px;
+  width: 40%;
+  height: 2.8rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.input-todo:focus {
+  border-color: rgb(166, 33, 249);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.form-btn {
+  padding: 10px 20px;
+  background-color: rgb(55, 17, 91);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: rgb(166, 33, 249);
+  box-shadow: 4px 4px 1px 2px;
+  color: rgb(241, 222, 255);
+
+}
+
 .tasks{
-    margin: 10px;
-}
+    margin: 0px;
+    height: fit-content;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .task{
+    font-size: 1.3rem;
+  }
 
 
 .item{
-    margin: 10px 10px;
+    margin: 25px 20px;
     padding: 5px 10px;
     display: flex;
     justify-content:space-between;
     list-style: none;
-    border: 1px solid red;
+    /* border: 1px solid rgb(54, 1, 1); */
+    background-color: rgb(55, 17, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
-.cross{
+.action-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.edit-btn, .done-btn, .doneall-btn, .close-btn{
+    margin: 10px;
+    /* background-color: blueviolet; */
+    color: aliceblue;
+    outline: none;
+    border: none;
     cursor: pointer;
-
 }
