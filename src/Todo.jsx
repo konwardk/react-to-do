@@ -50,7 +50,7 @@ export default function Todo() {
             {
               task.map((curTask,index)=>{
                 return <div className="item" key={index}>
-                 <li>
+                <li>
                    {curTask}
                 </li>
                   <div className="cross" onClick={() => removeTask(index)}>X</div>
