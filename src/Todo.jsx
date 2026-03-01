@@ -97,7 +97,7 @@ export default function Todo() {
   setTask(prevTask =>
     prevTask.map((task, i) =>
       i === index
-        ? { ...task, isDone: !task.isDone, bgColor: task.isDone ? '' : 'green' }
+        ? { ...task, isDone: !task.isDone }
         : task
     )
   );
@@ -127,23 +127,21 @@ export default function Todo() {
         <div className="tasks">
         <ul className="task-item">
           {task.map((curTask, index) => (
-            <li className="item" key={index} style={{ backgroundColor: curTask.bgColor  || '' ,fontWeight: curTask.isDone ? 'bold' : 'normal' }}>
+            <li className={`item ${curTask.isDone ? 'done' : ''}`} key={index}>
               <div>
-                <strong className='task'>{curTask.text}</strong>
+                <strong className='task' style={{ textDecoration: curTask.isDone ? 'line-through' : 'none' }}>{curTask.text}</strong>
                 <div className="timestamp">Added: {curTask.addedAt}</div>
               </div>
               <div className="action-icons">
-
-                  <span className='edit-btn' onClick={() => editTask(index)} prole="button" aria-label="Edit task">
+                <span className='edit-btn' onClick={() => editTask(index)} role="button" aria-label="Edit task">
                   <FaEdit />
                 </span>
-
                 {curTask.isDone ? (
-                  <span className="doneall-btn" onClick={() => toggleDone(index)}>
+                  <span className="doneall-btn" onClick={() => toggleDone(index)} role="button">
                     <MdDoneAll />
                   </span>
                 ) : (
-                  <span className="done-btn" onClick={() => toggleDone(index)}>
+                  <span className="done-btn" onClick={() => toggleDone(index)} role="button">
                     <MdDone />
                   </span>
                 )}
@@ -159,7 +157,6 @@ export default function Todo() {
             </li>
           ))}
         </ul>
-        
       </div>
       </div>
       <Footer/>
